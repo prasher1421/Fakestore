@@ -13,8 +13,8 @@ class FakerApplication : Application(){
         super.onCreate()
 
         applicationComponent = DaggerApplicationComponent
-            .builder()
-            .build()
+            .factory()
+            .create(this)
 
     }
 }

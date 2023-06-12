@@ -27,6 +27,10 @@ class MainActivity : AppCompatActivity() {
         (application as FakerApplication).applicationComponent
             .startInjecting(this)
 
+        val map = (application as FakerApplication)
+            .applicationComponent
+            .getMap()
+
         mainViewModel = ViewModelProvider(
             this,
             mainViewModelFactory
